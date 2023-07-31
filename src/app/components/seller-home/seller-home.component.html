@@ -1,0 +1,217 @@
+<div class="py-8 bg-gray-800"></div>
+<div class="mx-4 my-5 ng-gray-200">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-left text-gray-500">
+            <thead class="text-base text-white uppercase bg-gray-700">
+                <tr>
+                    <th scope="col" class="px-6 py-3 bg-gray-800">
+                        sr
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Brand
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Product Name
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-800">
+                        Price
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Category
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-800">
+                        Color
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Processor
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-800">
+                        Description
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        expiry date
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b" *ngFor="let row of productList; let i = index">
+                    <td class="px-6 py-4 bg-gray-300" id="id">
+                        {{ i+1 }}
+                    </td>
+                    <td class="px-6 py-4" id="brand">
+                        {{ row.brand }}
+                    </td>
+                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" id="productName">
+                        {{ row.productName }}
+                    </td>
+                    <td class="px-6 py-4 bg-gray-300" id="price">
+                        Rs {{ row.price }}
+                    </td>
+                    <td class="px-6 py-4" id="category">
+                        {{ row.Category }}
+                    </td>
+                    <td class="px-6 py-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-bold" id="color" [style.color]="row.color">
+                        {{ row.color }}
+                    </td>
+                    <td class="px-6 py-4" id="processor">
+                        {{ row.processor }}
+                    </td>
+                    <td class="px-6 py-4 bg-gray-300" id="Description">
+                        {{ row.Description }}
+                    </td>
+                    <td class="px-6 py-4" id="expiry">
+                        {{ row.expiry }}
+                    </td>
+                    <td class="px-6 py-4 flex justify-between">
+                        <button (click)="editProduct(i)" id="edit"  class="font-medium text-blue-600 ">
+                            <fa-icon [icon]="faPencil"></fa-icon>
+                        </button>
+                        <button (click)="deleteProduct(i+1)" id="delete"  class="font-medium text-blue-600 ">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+<!-- -------------------------------------------------------------edit row -->
+
+<div *ngIf="showModalEdit"
+    class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+    <div class="relative w-auto my-6 mx-auto max-w-6xl">
+        <!--content-->
+        <form [formGroup]="editForm" (ngSubmit)="onSubmitEdit()"
+            class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <!--header-->
+            <div class="flex items-start justify-between p-5 rounded-t">
+                <h3 class="text-3xl font-bold">
+                    Edit product
+                </h3>
+                <button
+                    class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    (click)="toggleModalEdit()">
+                    <span
+                        class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                        ×
+                    </span>
+                </button>
+            </div>
+            <div id="details" class="px-4">
+
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" name="productName" id="productName" formControlName="productName"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Product Name</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" id="brand" formControlName="brand"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            brand</label>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="range" name="range" id="range" formControlName="range"
+                            class="block py-2.5 px-0 w-full text-sm"
+                            placeholder=" " required />
+                        <label
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Range</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" id="processor" formControlName="processor"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            processor</label>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="color" name="color" id="color" formControlName="color"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            color</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                        <label
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        category</label>
+                        <select formControlName="Category" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                            <option selected hidden value="">select</option>
+                            <option value="Camera">Camera</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="Budget">Budget</option>
+                            <option value="Balanced">Balanced</option>
+                            <option value="media">media</option>
+                            <option value="Unique">Unique</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="textarea" pattern="[A-Z]{2}-[0-9]{2}-[A-Z]{1}-[0-9]{4}" name="Description" id="Description"
+                            formControlName="Description"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Description</label>
+                    </div>
+
+                    <div class="relative z-0 w-full mb-6 group">
+                        <div class="relative z-100">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                </svg>
+                            </div>
+                            <input datepicker type="text" id="expiry" formControlName="expiry"
+                                class="bg-gray-50 border border-gray-700 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                                placeholder="Expiry date">
+                        </div>
+                    </div>
+                </div>
+                <!-- validity:{{this.editForm.valid}} -->
+                <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                    <button
+                        class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button" (click)="toggleModalEdit()">
+                        Close
+                    </button>
+                    <button
+                        class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="submit">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div *ngIf="showModalEdit" class="opacity-25 fixed inset-0 z-40 bg-black"></div>

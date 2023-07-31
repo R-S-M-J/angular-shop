@@ -1,0 +1,156 @@
+<div
+  class="relative overflow-hidden bg-cover bg-no-repeat p-12 text-center"
+  style="
+    background-image: url('https://miro.medium.com/v2/resize:fit:1068/0*K-x_ExZfKbC9CMOB');
+    height: 570px;
+  "
+>
+  <div
+    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+    style="
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.11)
+      );
+    "
+  >
+    <div class="flex h-full items-center text-left ml-6">
+      <div class="text-white">
+        <h2
+          class="text-center animate-fade-in animate-delay-100 mb-10 text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
+        >
+          MobileVerse
+        </h2>
+        <h4
+          class="text-center animate-fade-in animate-delay-200 mb-6 text-xl font-semibold"
+        >
+          "Shop the Latest Trends in Mobile Fashion"
+        </h4>
+        <button
+          routerLink="seller-auth"
+          type="button"
+          class="align-items-center text-center animate-fade-in animate-delay-300 rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+          data-te-ripple-init
+          data-te-ripple-color="light"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full h-20 mt-1 flex items-center justify-center bg-gray-800">
+  <div
+    class="font-bold text-2xl text-center bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
+  >
+    Todays Trending Products
+  </div>
+</div>
+<div
+  class="bg-gradient-to-b from-gray-800 to-white text-transparent pb-4"
+></div>
+
+<div class="bg-white py-2">
+  <div
+    class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 mx-8 my-4 gap-4"
+  >
+    <div
+      *ngFor="let product of productList"
+      routerLink="/details/{{ product.id }}"
+      class="animate-slide-up w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 bg-gradient-to-r from-gray-900 to-gray-800 text-transparent"
+    >
+      <a>
+        <img
+          class="pt-8 px-8 pb-2 rounded-t-lg max-h-80 min-w-full max-w-sm"
+          src="{{ product.image }}"
+          alt="product image"
+        />
+      </a>
+      <div class="px-3 pb-3">
+        <a>
+          <h5
+            class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
+          >
+            {{ product.brand | titlecase }}
+            {{ product.productName | titlecase }}, {{ product.color }}
+          </h5>
+        </a>
+        <div class="flex items-center mt-2.5 mb-5">
+          <svg
+            class="w-4 h-4 text-yellow-300 mr-1"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-yellow-300 mr-1"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-yellow-300 mr-1"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-yellow-300 mr-1"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-gray-200 dark:text-gray-600"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <span
+            class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3"
+            >{{ product.range }}</span
+          >
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold text-gray-900 dark:text-white"
+            >Rs {{ product.price }}.00</span
+          >
+          <a
+            href="#"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >Add to cart</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-4 bg-gradient-to-t from-violet-200 to-violet-50"></div>
+<app-footer></app-footer>

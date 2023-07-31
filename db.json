@@ -1,0 +1,335 @@
+{
+  "seller": [
+    {
+      "fname": "Jason",
+      "lname": "Bourne",
+      "date": "1982",
+      "email": "Jasonbourne3@gmail.com",
+      "gender": "male",
+      "password": "aewfg54Asf",
+      "id": 1
+    },
+    {
+      "fname": "Jack",
+      "lname": "Reacher",
+      "date": "2000",
+      "email": "Jackreached31@gmail.com",
+      "gender": "male",
+      "password": "aewf65fwf",
+      "id": 2
+    },
+    {
+      "fname": "ana",
+      "lname": "belle",
+      "date": "1502",
+      "email": "anbellO@gmail.com",
+      "gender": "female",
+      "password": "deadddddd",
+      "id": 3
+    },
+    {
+      "fname": "Pravin",
+      "lname": "Seller",
+      "gender": "male",
+      "date": "1981-05-14",
+      "email": "prseller@gmail.com",
+      "password": "awerfr651",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "address": "40, uday nagar, near manewada road, nagpur",
+      "name": "Shriniwas Mahajan ",
+      "gender": "male",
+      "date": "2002-12-18",
+      "email": "shriniwasmahajan3@gmail.com",
+      "pass": "rsmj",
+      "id": 1
+    },
+    {
+      "address": "jagannathi nagri, near yashwant stadium, nagpur",
+      "name": "Sahil Nimbulkar",
+      "gender": "male",
+      "date": "2002-02-12",
+      "email": "sNimbulkar@gmail.com",
+      "pass": "nimbu",
+      "id": 2
+    },
+    {
+      "address": "112B, tilak nagaar, near kusumgar bajaj, nagpur",
+      "name": "Varun Kadu",
+      "gender": "male",
+      "date": "2003-06-18",
+      "email": "vrun@gmail.com",
+      "pass": "varun",
+      "id": 3
+    },
+    {
+      "address": "69, hirvri mahal, near gazhipur stadium, nagpur",
+      "name": "Sahil Pathan",
+      "gender": "male",
+      "date": "2003-07-22",
+      "email": "sahil.p@gmail.com",
+      "pass": "shaf",
+      "id": 4
+    },
+    {
+      "address": "163, tadoba complex, near futala lake, nagpur",
+      "name": "Priya Raut",
+      "gender": "female",
+      "date": "2010-07-30",
+      "email": "priyaRa@gmail.com",
+      "pass": "priya",
+      "id": 5
+    },
+    {
+      "address": "52, hirvri mahal, near gazhipur stadium, nagpur",
+      "name": "Parnika Harde",
+      "gender": "",
+      "date": "2006-06-01",
+      "email": "parhar@gmail.com",
+      "pass": "varni",
+      "id": 6
+    },
+    {
+      "address": "12v, gandhi nagar, near jamtha road, nagpur",
+      "name": "Shreyash Rodge",
+      "gender": "",
+      "date": "2003-10-23",
+      "email": "Shrey80@gmail.com",
+      "pass": "shrey",
+      "id": 7
+    },
+    {
+      "address": "15, hirvri nagar, near gazhiapur road, nagpur",
+      "name": "Parth Satokar",
+      "gender": "male",
+      "date": "2003-05-21",
+      "email": "parth34@gmail.com",
+      "pass": "parth",
+      "id": 8
+    },
+    {
+      "address": "40, vihar bhoomi, near beltarodi nagar, nagpur",
+      "name": "nimish shrimankar",
+      "gender": "male",
+      "date": "2000-05-10",
+      "email": "nimshri@gmail.com",
+      "pass": "nimish",
+      "id": 9
+    },
+    {
+      "address": "40, vihar runbhoomi, near beltarodi nagar, nagpur",
+      "name": "Ritesh Deshmukh",
+      "gender": "male",
+      "date": "2004-10-13",
+      "email": "riteshDesh*@gmail.com",
+      "pass": "4554mjjA88@56",
+      "id": 10
+    }
+  ],
+  "products": [
+    {
+      "productName": "iphone 15",
+      "brand": "apple",
+      "price": 150000,
+      "processor": "bionic 16",
+      "color": "purple",
+      "Category": "unique",
+      "range": "86",
+      "expiry": "2030-12-12",
+      "Description": "latest iphone in market at cheapest price ever",
+      "image": "https://www.91-img.com/gallery_images_uploads/1/9/196ed871f6e8c770ecd5baf4cb7b9b10e290eb8c.jpg?tr=h-550,w-0,c-at_max",
+      "id": 1
+    },
+    {
+      "productName": "galaxy S23",
+      "brand": "samsung",
+      "price": 210000,
+      "processor": "Snapdragon gen2+",
+      "color": "white",
+      "Category": "Unique",
+      "range": "99",
+      "expiry": "2040-12-12",
+      "Description": "latest samsung in market with best zoom ever",
+      "image": "https://images.samsung.com/latin_en/smartphones/galaxy-s23/images/galaxy-s23-highlights-color-back-lavender.jpg",
+      "id": 2
+    },
+    {
+      "productName": "a5s",
+      "brand": "oppo",
+      "price": 10000,
+      "processor": "mediatek p35",
+      "color": "black",
+      "Category": "budget",
+      "range": "42",
+      "expiry": "2025-12-12",
+      "Description": "budget smartphone with not bad battery life",
+      "image": "https://assorted.downloads.oppo.com/static/assets/images/products/A5s/sec-06-cf4a93086e5334e30472f126119c015516a49204.png",
+      "id": 3
+    },
+    {
+      "productName": "note 10s",
+      "brand": "Redmi",
+      "price": 20000,
+      "processor": "Snapdragon 730g",
+      "color": "#dba13d",
+      "Category": "Balanced",
+      "range": 76,
+      "expiry": "2030-05-27",
+      "Description": "old yet gold balanced phone for all",
+      "image": "https://i01.appmifile.com/webfile/globalimg/products/m/redmi-note-10s/section01s.jpg",
+      "id": 4
+    },
+    {
+      "productName": "X5 pro 5g",
+      "brand": "Poco",
+      "price": 21000,
+      "processor": "snapdragon 870",
+      "color": "#006eff",
+      "Category": "Gaming",
+      "range": 79,
+      "expiry": "2027-03-24",
+      "Description": "budget gaming phone with powerful processor",
+      "image": "https://www.91-cdn.com/images/poco%20x5%20pro.png?tr=tr:t-5",
+      "id": 5
+    },
+    {
+      "productName": "Nord 3 5g",
+      "brand": "OnePlus",
+      "price": 34000,
+      "processor": "MediaTek Dimensity 9000",
+      "color": "#ffffff",
+      "Category": "Unique",
+      "range": 76,
+      "expiry": "2032-08-26",
+      "Description": "get a onePlus with a good quality performance and reliability",
+      "image": "https://img1.gadgetsnow.com/gd/images/products/original/G285129.jpg",
+      "id": 6
+    },
+    {
+      "productName": "Narzo 60 5g",
+      "brand": "Realme",
+      "price": 18000,
+      "processor": "MediaTek Dimensity 6020",
+      "color": "#00e1ff",
+      "Category": "Budget",
+      "range": 35,
+      "expiry": "2031-11-03",
+      "Description": "budget phone for all with big battery",
+      "image": "https://www.91-img.com/pictures/157444-v5-realme-narzo-60-5g-mobile-phone-large-14.jpg",
+      "id": 7
+    },
+    {
+      "productName": "Neo 7 pro",
+      "brand": "IQOO",
+      "price": 35000,
+      "processor": "snapdragon 8 gen plus 1",
+      "color": "#fff700",
+      "Category": "Gaming",
+      "range": 75,
+      "expiry": "2034-12-28",
+      "Description": "latest gaming phone powered by dual chips",
+      "image": "https://i.gadgets360cdn.com/products/large/iqoo-neo-7-pro-649x800-1688466638.jpg?downsize=*:360",
+      "id": 8
+    },
+    {
+      "productName": "T2X",
+      "brand": "Vivo",
+      "price": 13000,
+      "processor": "MediaTek Dimensity 6020",
+      "color": "#2bff00",
+      "Category": "Budget",
+      "range": 64,
+      "expiry": "2027-06-24",
+      "Description": "The most popular phone priced around Rs. 13,000",
+      "image": "https://fdn2.mobgsm.com/vv/bigpic/vivo-y72t.jpg",
+      "id": 9
+    }
+  ],
+  "cart": [
+    {
+      "productName": "note 10s",
+      "brand": "Redmi",
+      "price": 20000,
+      "processor": "Snapdragon 730g",
+      "color": "#dba13d",
+      "Category": "Balanced",
+      "range": 76,
+      "expiry": "2030-05-27",
+      "Description": "old yet gold balanced phone for all",
+      "image": "https://i01.appmifile.com/webfile/globalimg/products/m/redmi-note-10s/section01s.jpg",
+      "quantity": 2,
+      "productId": 4,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "productName": "galaxy S23",
+      "brand": "samsung",
+      "price": 210000,
+      "processor": "Snapdragon gen2+",
+      "color": "white",
+      "Category": "Unique",
+      "range": "99",
+      "expiry": "2040-12-12",
+      "Description": "latest samsung in market with best zoom ever",
+      "image": "https://images.samsung.com/latin_en/smartphones/galaxy-s23/images/galaxy-s23-highlights-color-back-lavender.jpg",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 1,
+      "id": 2
+    }
+  ],
+  "orders": [
+    {
+      "name": "Shriniwas Mahajan ",
+      "email": "shriniwasmahajan3@gmail.com",
+      "address": "68, hirvri mahal, near gazhipur stadium, nagpur",
+      "state": "mah",
+      "city": "nagpur",
+      "zip": "98603",
+      "pay": "cod",
+      "totalPrice": 405400,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "alphabet",
+      "email": "shriniwasmahajan3@gmail.com",
+      "address": "jagannathi nagri, near yashwant stadium, nagpur",
+      "state": "mahrashtra",
+      "city": "nagpur",
+      "zip": "98645",
+      "pay": "",
+      "totalPrice": 27000,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "Varun Kadu",
+      "email": "shriniwasmahajan3@gmail.com",
+      "address": "40, uday nagar, near manewada road, nagpur",
+      "state": "mahrashtra",
+      "city": "nagpur",
+      "zip": "98603",
+      "pay": "",
+      "totalPrice": 297400,
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "name": "Varun Kadu",
+      "email": "shriniwasmahajan3@gmail.com",
+      "address": "40, uday nagar, near manewada road, nagpur",
+      "state": "mahrashtra",
+      "city": "nagpur",
+      "zip": "98645",
+      "pay": "",
+      "totalPrice": 169600,
+      "userId": 3,
+      "id": 4
+    }
+  ]
+}

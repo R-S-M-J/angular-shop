@@ -1,0 +1,92 @@
+<div class="py-9 bg-gray-800"></div>
+<!-- component -->
+<div class="py-14 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
+    <div *ngIf="isVariableSet"
+        class="p-5 rounded-lg bg-gray-100 flex-col justify-center w-full shadow-lg border border-gray-300 flex items-center">
+        <div class="text-bold text-green-500 text-4xl animate-bounce">
+            Your order has been placed!
+        </div>
+        <a class="pt-2 text-sm text-gray-500">Thankyou for using our services</a>
+        <p class="pt-3 text-sm text-gray-600lg:text-4xl">Order #13432</p>
+        <p class="font-medium leading-6 text-gray-600">
+            21st March 2021 at 10:34 PM
+        </p>
+    </div>
+
+    <div class="flex justify-start item-start space-y-2 flex-col"></div>
+    <div
+        class="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
+        <div class="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8">
+            <div
+                class="flex flex-col justify-start items-start dark:bg-gray-800 bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
+                <p class="text-lg md:text-xl dark:text-white font-semibold leading-6 xl:leading-5 text-gray-800">
+                    Customer’s Cart
+                </p>
+
+                <div *ngFor="let order of orderData,let i=index"
+                    class="mt-4 md:mt-6 flex items-center w-full">
+                    <div
+                        class="border-b border-gray-200 flex justify-between items-start w-full pb-8 space-y-4 md:space-y-0">
+                        <div class="w-full flex ">
+                            
+                            <div class="flex justify-start items-start flex-col space-y-2">
+                                <h3 class="ext-sm dark:text-white leading-none text-gray-800">
+                                    {{i+1}}.
+                                </h3>
+                                <p class="text-sm dark:text-white leading-none text-gray-800">
+                                    <span class="dark:text-gray-400 text-gray-300">name: </span>
+                                    {{order.name}}
+                                </p>
+                                <p class="text-sm dark:text-white leading-none text-gray-800">
+                                    <span class="dark:text-gray-400 text-gray-300">Shipping Address: </span>
+                                   {{order.address}}
+                                </p>
+                                <p class="text-sm dark:text-white leading-none text-gray-800">
+                                    <span class="dark:text-gray-400 text-gray-300">total Price: </span>
+                                    {{order.totalPrice | number:'1.2-2'}}
+                                </p>
+                            </div>
+                        </div>
+                            <button (click)="cancelOrder(order.id)"
+                                class="float-right font-semibold p-2 bg-gray-700 rounded-lg cursor-pointer text-red-500">
+                                Cancel Order
+                            </button>
+                    </div>
+                </div>
+
+                <div
+                    class="flex justify-center flex-col md:flex-row flex-col items-stretch w-full space-y-4 md:space-y-0 md:space-x-6 xl:space-x-8">
+                    <div
+                        class="flex flex-col justify-center px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 dark:bg-gray-800 space-y-6">
+                        <h3 class="text-xl dark:text-white font-semibold leading-5 text-gray-800">
+                            Shipping
+                        </h3>
+                        <div class="flex justify-between items-start w-full">
+                            <div class="flex justify-center items-center space-x-4">
+                                <div class="w-8 h-8">
+                                    <img class="w-full h-full" alt="logo" src="https://i.ibb.co/L8KSdNQ/image-3.png" />
+                                </div>
+                                <div class="flex flex-col justify-start items-center">
+                                    <p class="text-lg leading-6 dark:text-white font-semibold text-gray-800">
+                                        DPD Delivery<br /><span class="font-normal">
+                                            Delivery in 24 Hours</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-lg font-semibold leading-6 dark:text-white text-gray-800">
+                                $8.00
+                            </p>
+                        </div>
+                        <div class="w-full flex justify-center items-center">
+                            <button
+                                class="hover:bg-black dark:bg-white dark:text-gray-800 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 py-5 w-96 md:w-full bg-gray-800 text-base font-medium leading-4 text-white">
+                                View Carrier Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>

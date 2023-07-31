@@ -1,0 +1,100 @@
+<div class="py-9 bg-gray-800"></div>
+
+<style>
+  @layer utilities {
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+</style>
+
+<div *ngIf="empty">
+  <div class="flex justify-center items-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png" class="max-h-80 mt-8" />
+    <div class="text-red-500 text-5xl ml-5">Cart is Empty!</div>
+  </div>
+</div>
+
+<div>
+  <div *ngIf="!empty" class="h-auto pt-10 scroll-smooth">
+    <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+    <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+      <div class="rounded-lg md:w-2/3 md:w-2/3 overflow-y-auto max-h-auto">
+        <div *ngFor="let cart of cartData"
+          class="justify-between mb-6 rounded-lg bg-gray-700 p-6 shadow-xl sm:flex sm:justify-start">
+          <img src="{{ cart.image }}" alt="product-image" a class="w-full max-h-sm rounded-lg sm:w-40" />
+          <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+            <div class="mt-5 w-1/2 flex flex-col">
+              <h2 class="text-lg font-bold text-gray-100">
+                {{ cart.brand | titlecase }}, {{ cart.productName | titlecase }}
+              </h2>
+              <p [style.backgroundColor]="cart.color" class="border-1 p-2 rounded-full"></p>
+              <p class="text-sm mt-5 text-white mr-4">Rs {{ cart.price }}</p>
+              <p class="mt-5 text-gray-300 w-full">{{ cart.Description }}</p>
+            </div>
+            <div class="mt-4 flex flex-col-reverse justify-between sm:space-y-6 mt-0 sm:block">
+              <div class="float-right" (click)="removeFromCart(cart.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-10 w-10 hover:animate-spin cursor-pointer duration-150 text-red-300 hover:text-red-500">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="py-5"></div>
+              <div class="flex items-center h-auto border-gray-100">
+                <div (click)="handleQuantity('minus')"
+                  class="rounded-l bg-gray-600 text-white py-1 px-3.5 duration-100 hover:bg-blue-800 hover:text-blue-50">
+                  Quantity
+                </div>
+                <input class="h-8 w-8 border bg-white text-center rounded-r text-xs outline-none" type="number"
+                  value="{{ cart.quantity }}" min="1" readonly />
+                
+              </div>
+              <button class="button" routerLink="/details/{{cart.productId}}"cart>
+                <span class="button_lg">
+                  <span class="button_sl"></span>
+                  <span class="button_text">CHANGE</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub total -->
+      <div class="sticky top-20 mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+        <div class="mb-2 flex justify-between">
+          <p class="text-gray-700">Subtotal</p>
+          <p class="text-gray-700">Rs {{ priceSummary.price }}</p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-gray-700">Discount</p>
+          <p class="text-gray-700">-{{ priceSummary.discount }}</p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-gray-700">Tax</p>
+          <p class="text-gray-700">Rs {{ priceSummary.tax }}</p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-gray-700">Shipping</p>
+          <p class="text-gray-700">Rs {{ priceSummary.delivery }}</p>
+        </div>
+        <hr class="my-4" />
+        <div class="flex justify-between">
+          <p class="text-lg font-bold">Total</p>
+          <div class="">
+            <p class="mb-1 text-lg font-bold">Rs {{ priceSummary.total }}</p>
+            <p class="text-sm text-gray-700">including GST</p>
+          </div>
+        </div>
+        <button (click)="checkout()"
+          class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
+          Check out
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
