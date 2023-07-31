@@ -8,125 +8,17 @@
       "gender": "male",
       "password": "aewfg54Asf",
       "id": 1
-    },
-    {
-      "fname": "Jack",
-      "lname": "Reacher",
-      "date": "2000",
-      "email": "Jackreached31@gmail.com",
-      "gender": "male",
-      "password": "aewf65fwf",
-      "id": 2
-    },
-    {
-      "fname": "ana",
-      "lname": "belle",
-      "date": "1502",
-      "email": "anbellO@gmail.com",
-      "gender": "female",
-      "password": "deadddddd",
-      "id": 3
-    },
-    {
-      "fname": "Pravin",
-      "lname": "Seller",
-      "gender": "male",
-      "date": "1981-05-14",
-      "email": "prseller@gmail.com",
-      "password": "awerfr651",
-      "id": 4
     }
   ],
   "users": [
     {
-      "address": "40, uday nagar, near manewada road, nagpur",
-      "name": "Shriniwas Mahajan ",
-      "gender": "male",
-      "date": "2002-12-18",
-      "email": "shriniwasmahajan3@gmail.com",
-      "pass": "rsmj",
-      "id": 1
-    },
-    {
-      "address": "jagannathi nagri, near yashwant stadium, nagpur",
-      "name": "Sahil Nimbulkar",
-      "gender": "male",
-      "date": "2002-02-12",
-      "email": "sNimbulkar@gmail.com",
-      "pass": "nimbu",
-      "id": 2
-    },
-    {
-      "address": "112B, tilak nagaar, near kusumgar bajaj, nagpur",
-      "name": "Varun Kadu",
-      "gender": "male",
-      "date": "2003-06-18",
-      "email": "vrun@gmail.com",
-      "pass": "varun",
-      "id": 3
-    },
-    {
-      "address": "69, hirvri mahal, near gazhipur stadium, nagpur",
-      "name": "Sahil Pathan",
-      "gender": "male",
-      "date": "2003-07-22",
-      "email": "sahil.p@gmail.com",
-      "pass": "shaf",
-      "id": 4
-    },
-    {
       "address": "163, tadoba complex, near futala lake, nagpur",
-      "name": "Priya Raut",
+      "name": "Alexa Kreg",
       "gender": "female",
       "date": "2010-07-30",
-      "email": "priyaRa@gmail.com",
-      "pass": "priya",
-      "id": 5
-    },
-    {
-      "address": "52, hirvri mahal, near gazhipur stadium, nagpur",
-      "name": "Parnika Harde",
-      "gender": "",
-      "date": "2006-06-01",
-      "email": "parhar@gmail.com",
-      "pass": "varni",
-      "id": 6
-    },
-    {
-      "address": "12v, gandhi nagar, near jamtha road, nagpur",
-      "name": "Shreyash Rodge",
-      "gender": "",
-      "date": "2003-10-23",
-      "email": "Shrey80@gmail.com",
-      "pass": "shrey",
-      "id": 7
-    },
-    {
-      "address": "15, hirvri nagar, near gazhiapur road, nagpur",
-      "name": "Parth Satokar",
-      "gender": "male",
-      "date": "2003-05-21",
-      "email": "parth34@gmail.com",
-      "pass": "parth",
-      "id": 8
-    },
-    {
-      "address": "40, vihar bhoomi, near beltarodi nagar, nagpur",
-      "name": "nimish shrimankar",
-      "gender": "male",
-      "date": "2000-05-10",
-      "email": "nimshri@gmail.com",
-      "pass": "nimish",
-      "id": 9
-    },
-    {
-      "address": "40, vihar runbhoomi, near beltarodi nagar, nagpur",
-      "name": "Ritesh Deshmukh",
-      "gender": "male",
-      "date": "2004-10-13",
-      "email": "riteshDesh*@gmail.com",
-      "pass": "4554mjjA88@56",
-      "id": 10
+      "email": "avcii@gmail.com",
+      "pass": "skd%^51Gkj",
+      "id": 1
     }
   ],
   "products": [
@@ -283,53 +175,6 @@
     }
   ],
   "orders": [
-    {
-      "name": "Shriniwas Mahajan ",
-      "email": "shriniwasmahajan3@gmail.com",
-      "address": "68, hirvri mahal, near gazhipur stadium, nagpur",
-      "state": "mah",
-      "city": "nagpur",
-      "zip": "98603",
-      "pay": "cod",
-      "totalPrice": 405400,
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "name": "alphabet",
-      "email": "shriniwasmahajan3@gmail.com",
-      "address": "jagannathi nagri, near yashwant stadium, nagpur",
-      "state": "mahrashtra",
-      "city": "nagpur",
-      "zip": "98645",
-      "pay": "",
-      "totalPrice": 27000,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "name": "Varun Kadu",
-      "email": "shriniwasmahajan3@gmail.com",
-      "address": "40, uday nagar, near manewada road, nagpur",
-      "state": "mahrashtra",
-      "city": "nagpur",
-      "zip": "98603",
-      "pay": "",
-      "totalPrice": 297400,
-      "userId": 3,
-      "id": 3
-    },
-    {
-      "name": "Varun Kadu",
-      "email": "shriniwasmahajan3@gmail.com",
-      "address": "40, uday nagar, near manewada road, nagpur",
-      "state": "mahrashtra",
-      "city": "nagpur",
-      "zip": "98645",
-      "pay": "",
-      "totalPrice": 169600,
-      "userId": 3,
-      "id": 4
-    }
+    
   ]
 }
